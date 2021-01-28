@@ -1,0 +1,30 @@
+<div class="example-container">
+    <mat-form-field>
+        <input matInput placeholder="Fullname" (keyup)="teclear($event)">
+    </mat-form-field>
+
+    <p>{{nombre}}</p>
+
+</div>
+<div class="example-container">
+    <mat-form-field>
+        <input matInput placeholder="dni" [(ngModel)]="dni" (keyup)="teclear($event)" (keyup.enter)="agregar()">
+    </mat-form-field>
+    
+    <button mat-raised-button color="accent" [disabled]="buttonStatus" (click)="agregar()" >Agregar</button>
+
+    <!-- <ul>
+        <li *ngFor="let e of lista">{{e}}</li>
+    </ul> -->
+    <mat-list>
+        <mat-list-item *ngFor="let e of lista;  let i = index">{{i+1}} {{e}}
+            <div ngSwitch="{{e%2}}">
+                <div *ngSwitchCase="0" [ngClass]="'par'">Par</div>
+                <div *ngSwitchCase="1" [ngClass]="'impar'">Impar</div>
+                <div *ngSwitchDefault>Sin resultados</div>
+            </div>
+            <button mat-raised-button color="accent" (click)="remover(i)">Borrar</button>
+            <mat-divider></mat-divider>
+        </mat-list-item>
+    </mat-list>
+</div>
