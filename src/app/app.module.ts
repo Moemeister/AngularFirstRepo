@@ -11,14 +11,17 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
 import {MatListModule} from '@angular/material/list';
 import {MatDividerModule} from '@angular/material/divider';
+import {MatCardModule} from '@angular/material/card';
 
 import {FormsModule} from '@angular/forms';
+import { ChuchoComponent } from './chucho/chucho.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaComponent
+    PersonaComponent,
+    ChuchoComponent
   ],
   imports: [
     BrowserModule,
@@ -29,7 +32,8 @@ import {FormsModule} from '@angular/forms';
     MatInputModule,
     FormsModule,
     MatListModule,
-    MatDividerModule
+    MatDividerModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

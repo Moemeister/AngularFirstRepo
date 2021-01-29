@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-persona',
@@ -16,6 +16,9 @@ export class PersonaComponent implements OnInit {
   dni: string;
   lista: string[] = [];
   buttonStatus: boolean = true;
+
+  @Input() mensaje: string;
+  @Input() perro: string;
 
   teclear(event){
    this.nombre = event.target.value;

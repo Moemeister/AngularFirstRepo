@@ -1,3 +1,4 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <p>holi aquí pondré componentes :3</p>
-<app-persona></app-persona>
+<app-persona [mensaje]="ladrido"></app-persona>
+<app-chucho [raza]="'aguacaperrito'" [nombre]="'Rocky'" (emisor)="getLadrido($event)"></app-chucho>
